@@ -12,11 +12,23 @@ real    0m13.573s
 user    0m42.134s
 sys     0m0.623s
 ```
+* [loop_count](./loop_count/main.tf): use `count` loop:
+```
+real    0m7.059s
+user    0m16.211s
+sys     0m0.655s
+```
 * [loop_output](./loop_output/main.tf): use `for_each` loop, output the ids:
 ```
 real    5m26.874s
 user    8m28.932s
 sys     0m9.135s
+```
+* [loop_count_output](./loop_count_output/main.tf): use `count` loop, output the ids:
+```
+real    7m9.471s
+user    14m9.690s
+sys     0m15.683s
 ```
 * [unrolled](./unrolled/main.tf): use repeated resources:
 ```
@@ -32,4 +44,8 @@ sys     0m1.454s
 ```
 
 ## Conclusion
-Referencing elements created directly, rather than those created by a loop, is almost 30 times faster.
+
+* **Referencing elements created directly, rather than those created by a for_each loop, is almost 30 times faster.**
+* **Referencing elements created directly, rather than those created by a count loop, is almost 40 times faster.**
+* Creating elements with for_each loops is slightly slower than creating them directly.
+* Creating elements with count loops is slightly faster than creating them directly.

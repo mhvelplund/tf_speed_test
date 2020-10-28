@@ -1,13 +1,3 @@
-# Without outputs.tf
-# real    0m13.573s
-# user    0m42.134s
-# sys     0m0.623s
-
-# With outputs.tf
-# real    5m26.874s
-# user    8m28.932s
-# sys     0m9.135s
-
 provider "aws" {
   region = "eu-west-1"
 }
