@@ -4,7 +4,7 @@ Based on internet rumors I wrote some sample templates and timed their planning.
 All the examples create a 1000 buckets. 
 
 ## Test
-Running the tests on devops2 with 2 CPU cores:
+Running the tests on devops2 with 4 CPU, 16 gig RAM cores with Terraform 0.12.29:
 
 * [loop](./loop/main.tf): use `for_each` loop:
 ```
